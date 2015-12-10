@@ -1,0 +1,33 @@
+<?php 
+    $arr = Array('1' => 'Антоний', 'Гай', 'Тиберий', 'Юлий', 'Марк', 'Корнелий', 'Брут', 'Троян', 'Аврелий');
+
+?>
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Table</title>
+        <link rel='stylesheet' href='css/bootstrap.min.css' type='text/css' media='all'>
+    </head>
+    <body>
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr class="success">
+              <th>Номер</th>
+              <th>Имя</th>          
+            </tr>
+          </thead>
+          <tbody>
+              <?php foreach(array_keys($arr) as $key): ?>
+                <tr>
+                    <td><?php echo $key; ?></td>
+                    <td><?php echo $arr[$key] ?></td>
+                </tr>
+              <?php endforeach;?>
+          </tbody>
+    </table>
+    </body>
+</html>
+
+
